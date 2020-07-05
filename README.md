@@ -1,3 +1,10 @@
 # Miscellaneous
-This repo contains different documents like setting up sublime-text and vim for C++ development, configuring and executing
-git operations, regular expressions and so on.
+This repo contains tutorials for:
+SUBLIME-TEXT
+- Configuration (general)
+- Installing additional packages like terminus, advanced new file etc.
+- Configuring colorschemes for the editor and terminus
+- Configuring the editor as a C++ IDE
+
+...TO BE CONTINUED...
+
