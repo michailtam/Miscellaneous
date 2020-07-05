@@ -1,5 +1,22 @@
 " IMPORTANT: For more available options you can write in command mode :help option-list or :options.
 
+" IMPORTANT: To install plugins previously a plugin manager has to be installed based on the following tutorials.
+" In general, it is recommended to use a plugin manager and not installing the plugins manually (because of updates).
+" https://opensource.com/article/20/2/how-install-vim-plugins
+" https://www.youtube.com/watch?v=2prsFrKwbOo&t=313s
+" After downloading and saving the plugin execute :PlugInstall in vim to
+" enable the plugin.
+
+" nerdtree is a plugin for navigation
+call plug#begin()
+Plug 'preservim/nerdtree'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'vim-syntastic/syntastic'
+"Plug 'Clewn'
+Plug 'majutsushi/tagbar'
+Plug 'JBakamovic/yavide'
+call plug#end()
+
 " Sets the history to 100 (default is 50). 
 set history=500 
 
@@ -62,3 +79,4 @@ colorscheme simple-dark
 " vim: set ft=vim :
 " vim: set ft=cpp :
 " vim: set ft=c :
+" vim: set ft=txt :
