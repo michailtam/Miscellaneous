@@ -7,14 +7,26 @@
 " After downloading and saving the plugin execute :PlugInstall in vim to
 " enable the plugin.
 
-" nerdtree is a plugin for navigation
+" Different tutorials of how to turn vim into a C++ IDE: source https://idorobotics.com/2018/04/01/setting-up-vim-for-c-development/
+" Yavide plugins to transform vim into a C++ IDE.
+" source: https://github.com/JBakamovic/yavide#installation
 call plug#begin()
-Plug 'preservim/nerdtree'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'vim-syntastic/syntastic'
-"Plug 'Clewn'
 Plug 'majutsushi/tagbar'
-Plug 'JBakamovic/yavide'
+Plug 'vim-scripts/a.vim'
+Plug 'xavierd/clang_complete'
+Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdtree'
+Plug 'ervandew/supertab'
+Plug 'majutsushi/tagbar'
+Plug 'SirVer/ultisnips'
+Plug 'vim-airline/vim-airline'
+Plug 'Townk/vim-autoclose'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-pathogen'
 call plug#end()
 
 " Sets the history to 100 (default is 50). 
