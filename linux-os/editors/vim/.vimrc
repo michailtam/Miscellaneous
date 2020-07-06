@@ -7,13 +7,15 @@
 " After downloading and saving the plugin execute :PlugInstall in vim to
 " enable the plugin.
 
-" Different tutorials of how to turn vim into a C++ IDE: source https://idorobotics.com/2018/04/01/setting-up-vim-for-c-development/
-" Yavide plugins to transform vim into a C++ IDE.
-" source: https://github.com/JBakamovic/yavide#installation
+" Tutorials of how to turn vim into a C++ IDE: 
+" https://idorobotics.com/2018/04/01/setting-up-vim-for-c-development/
+" https://www.quora.com/How-to-build-vim-editor-in-Linux-into-an-effective-C++-programming-IDE
+ 
 call plug#begin()
 Plug 'ycm-core/YouCompleteMe'
 Plug 'vim-syntastic/syntastic'
 Plug 'majutsushi/tagbar'
+" YAVIDE Plugins for C++: https://github.com/JBakamovic/yavide#installation
 Plug 'vim-scripts/a.vim'
 Plug 'xavierd/clang_complete'
 Plug 'preservim/nerdcommenter'
@@ -27,6 +29,15 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-pathogen'
+" QUORA Plugins for C++: https://www.quora.com/How-to-build-vim-editor-in-Linux-into-an-effective-C++-programming-IDE 
+" Plug 'LucHermitte/local_vimrc'
+Plug 'LucHermitte/lh-cpp'
+Plug 'universal-ctags/ctags'
+Plug 'cquery-project/cquery'
+Plug 'LucHermitte/vim-refactor'
+Plug 'gilligan/vim-lldb'
+Plug 'LucHermitte/VimFold4C'
+Plug 'tomtom/checksyntax_vim'
 call plug#end()
 
 " Sets the history to 100 (default is 50). 
