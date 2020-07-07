@@ -1,4 +1,5 @@
 " IMPORTANT: For more available options you can write in command mode :help option-list or :options.
+let g:clang_library_path='/usr/lib/llvm-6.0/lib/libclang.so'
 
 " IMPORTANT: To install plugins previously a plugin manager has to be installed based on the following tutorials.
 " In general, it is recommended to use a plugin manager and not installing the plugins manually (because of updates).
@@ -30,14 +31,14 @@ Plug 'airblade/vim-gitgutter'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-pathogen'
 " QUORA Plugins for C++: https://www.quora.com/How-to-build-vim-editor-in-Linux-into-an-effective-C++-programming-IDE 
-" Plug 'LucHermitte/local_vimrc'
-Plug 'LucHermitte/lh-cpp'
-Plug 'universal-ctags/ctags'
+"Plug 'LucHermitte/local_vimrc'
+"Plug 'LucHermitte/lh-cpp'
+"Plug 'universal-ctags/ctags'
 Plug 'cquery-project/cquery'
 Plug 'LucHermitte/vim-refactor'
-Plug 'gilligan/vim-lldb'
-Plug 'LucHermitte/VimFold4C'
-Plug 'tomtom/checksyntax_vim'
+"Plug 'gilligan/vim-lldb'
+"Plug 'LucHermitte/VimFold4C'
+"Plug 'tomtom/checksyntax_vim'
 call plug#end()
 
 " Sets the history to 100 (default is 50). 
@@ -103,3 +104,4 @@ colorscheme simple-dark
 " vim: set ft=cpp :
 " vim: set ft=c :
 " vim: set ft=txt :
+" vim: set ft=h :
