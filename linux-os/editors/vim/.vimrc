@@ -1,6 +1,6 @@
 " IMPORTANT: For more available options you can write in command mode :help option-list or :options.
-let g:clang_library_path='/usr/lib/llvm-6.0/lib/libclang.so'
 
+" Enable specific plugins
 " IMPORTANT: To install plugins previously a plugin manager has to be installed based on the following tutorials.
 " In general, it is recommended to use a plugin manager and not installing the plugins manually (because of updates).
 " https://opensource.com/article/20/2/how-install-vim-plugins
@@ -11,35 +11,44 @@ let g:clang_library_path='/usr/lib/llvm-6.0/lib/libclang.so'
 " Tutorials of how to turn vim into a C++ IDE: 
 " https://idorobotics.com/2018/04/01/setting-up-vim-for-c-development/
 " https://www.quora.com/How-to-build-vim-editor-in-Linux-into-an-effective-C++-programming-IDE
- 
+
 call plug#begin()
-Plug 'ycm-core/YouCompleteMe'
-Plug 'vim-syntastic/syntastic'
-Plug 'majutsushi/tagbar'
+Plug 'ycm-core/YouCompleteMe' 		" Code completion for C++
+Plug 'vim-syntastic/syntastic' 		" Syntax checking for C++
+Plug 'majutsushi/tagbar' 					" Tags for C++ code
 " YAVIDE Plugins for C++: https://github.com/JBakamovic/yavide#installation
-Plug 'vim-scripts/a.vim'
-Plug 'xavierd/clang_complete'
-Plug 'preservim/nerdcommenter'
-Plug 'preservim/nerdtree'
-Plug 'ervandew/supertab'
-Plug 'majutsushi/tagbar'
-Plug 'SirVer/ultisnips'
-Plug 'vim-airline/vim-airline'
-Plug 'Townk/vim-autoclose'
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'tpope/vim-pathogen'
-" QUORA Plugins for C++: https://www.quora.com/How-to-build-vim-editor-in-Linux-into-an-effective-C++-programming-IDE 
+Plug 'vim-scripts/a.vim'					" Commands to switch between source and header files
+Plug 'xavierd/clang_complete'			" C and C++ code completion
+Plug 'preservim/nerdcommenter'		" Comment functions
+Plug 'preservim/nerdtree'					" File explorer for vim
+Plug 'ervandew/supertab'					" Enables <Tab> insert completion
+Plug 'majutsushi/tagbar'					" Easy way to browse tags
+Plug 'SirVer/ultisnips'						" Provides ready code snippets e.g. for classes
+Plug 'vim-airline/vim-airline'		" Displays the status of the plugin-loading
+Plug 'Townk/vim-autoclose'				" Provides autoclose when typing a character (similar to autocompletion)
+Plug 'tpope/vim-fugitive'					" Git plugin
+Plug 'airblade/vim-gitgutter'			" Show a git diff in the sign column
+Plug 'terryma/vim-multiple-cursors' " Enables multiple selection
+Plug 'tpope/vim-pathogen'					" Installs plugins and runtime files in their own private directories
+" ADDITIONAL Plugins for C++: https://www.quora.com/How-to-build-vim-editor-in-Linux-into-an-effective-C++-programming-IDE 
 "Plug 'LucHermitte/local_vimrc'
 "Plug 'LucHermitte/lh-cpp'
 "Plug 'universal-ctags/ctags'
-Plug 'cquery-project/cquery'
-Plug 'LucHermitte/vim-refactor'
+Plug 'cquery-project/cquery'			" C++ indexation
+Plug 'LucHermitte/vim-refactor'		" Enables refactoring
+Plug 'vim-scripts/taglist.vim'		" Makes finding variables, types, classes and functions in the code easier
 "Plug 'gilligan/vim-lldb'
 "Plug 'LucHermitte/VimFold4C'
 "Plug 'tomtom/checksyntax_vim'
+Plug 'frazrepo/vim-rainbow'				" Shows different colors for the brackets
+Plug 'mileszs/ack.vim'						" Searches for a file which contains a certain line or a certain word
+Plug 'junegunn/fzf.vim'						" Intelligent search for filenames. Type :FZF to start searching
+Plug 'altercation/vim-colors-solarized' " Vim colorschemes
+Plug 'mattn/emmet-vim'						" Plugin for html
 call plug#end()
+
+let g:clang_library_path='/usr/lib/llvm-6.0/lib/libclang.so'
+let g:rainbow_active = 1
 
 " Sets the history to 100 (default is 50). 
 set history=500 

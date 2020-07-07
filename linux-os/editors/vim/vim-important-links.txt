@@ -13,6 +13,7 @@ PLUGINS
 https://mkaz.blog/working-with-vim/plugins/#:~:text=Remove%20a%20Plugin,delete%20the%20directory%2C%20type%20Y%20.
 https://opensource.com/article/20/2/how-install-vim-plugins
 https://opensource.com/article/19/11/vim-plugins
+https://medium.com/@huntie/10-essential-vim-plugins-for-2018-39957190b7a9
 
 TROUBLESHOOTING
 https://vi.stackexchange.com/questions/12892/e488-trailing-characters-error-after-attempting-to-install-vim-hybrid
