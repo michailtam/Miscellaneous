@@ -1,4 +1,6 @@
 " IMPORTANT: For more available options you can write in command mode :help option-list or :options.
+" ggles the navigation 
+" ggles the navigation on and off
 
 " Enable specific plugins
 " IMPORTANT: To install plugins previously a plugin manager has to be installed based on the following tutorials.
@@ -21,6 +23,7 @@ Plug 'vim-scripts/a.vim'					" Commands to switch between source and header file
 Plug 'xavierd/clang_complete'			" C and C++ code completion
 Plug 'preservim/nerdcommenter'		" Comment functions
 Plug 'preservim/nerdtree'					" File explorer for vim
+Plug 'jistr/vim-nerdtree-tabs'		" Makes NERDTree feel like a true panel, independent of tabs
 Plug 'ervandew/supertab'					" Enables <Tab> insert completion
 Plug 'majutsushi/tagbar'					" Easy way to browse tags
 Plug 'SirVer/ultisnips'						" Provides ready code snippets e.g. for classes
@@ -44,11 +47,36 @@ Plug 'frazrepo/vim-rainbow'				" Shows different colors for the brackets
 Plug 'mileszs/ack.vim'						" Searches for a file which contains a certain line or a certain word
 Plug 'junegunn/fzf.vim'						" Intelligent search for filenames. Type :FZF to start searching
 Plug 'altercation/vim-colors-solarized' " Vim colorschemes
-Plug 'mattn/emmet-vim'						" Plugin for html
+"Plug 'mattn/emmet-vim'						" Plugin for html
+"Plug 'liuchengxu/vim-which-key'		" Shows the current keymappings of vim
 call plug#end()
 
+" Plugin configurations
 let g:clang_library_path='/usr/lib/llvm-6.0/lib/libclang.so'
 let g:rainbow_active = 1
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+let g:nerdtree_tabs_open_on_console_startup=1
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+
+autocmd vimenter * NERDTree
+
+" KEY MAPPINGS
+nmap <F6> :NERDTreeToggle<CR> "Toggles the navigation 
+nnoremap <C-Right> :<ESC><C-W>w
+
+" Setup the encoding
+set enc=utf-8                                                               " Set UTF-8 encoding
+set fenc=utf-8
+set termencoding=utf-8
+set nocompatible
 
 " Sets the history to 100 (default is 50). 
 set history=500 
@@ -98,6 +126,9 @@ set si
 
 " Tells vim to match the colors based on the background
 set bg=dark
+
+" Enables the smart indentation
+set smartindent 
 
 " Sets the color sheme. To make this working you have to create a directory colors in ~/.vim/ and copy the .vim " colorscheme file inside.
 " IMPORTANT: In case of the following error message:
