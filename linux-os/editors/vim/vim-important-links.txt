@@ -4,6 +4,7 @@ It contains among other things setting up vim as an IDE, colorschemes, plugins e
 SETUP
 https://opensource.com/article/19/11/vim-plugins
 https://www.youtube.com/watch?v=cTBgtN-s2Zw&t=621s
+https://www.youtube.com/watch?v=ZW6rttyD9vA  # Install colorschemes
 
 IDE
 https://idorobotics.com/2018/04/01/setting-up-vim-for-c-development/
