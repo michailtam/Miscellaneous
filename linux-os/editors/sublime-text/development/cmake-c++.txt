@@ -34,5 +34,4 @@ codelite sample.workspace
 to run codelite in the background so you can use the terminal, append an ampersand i.e.
 codelite sample.workspace &
 
-Source:
-https://www.youtube.com/watch?v=elycr5wi9_g&t=183s
+Source: https://www.youtube.com/watch?v=elycr5wi9_g&t=183s
