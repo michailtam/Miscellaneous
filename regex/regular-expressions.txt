@@ -50,4 +50,8 @@ EXAMPLES:
 https://www.youtube.com/watch?v=DeIWR4gv1-8&list=TLPQMDQwNDIwMjBbHMctH4n7yw&index=2
 
 5. Matches any character (except for line terminators): .*?
- 
+
+6. Finds every comment in a python script: #.*
+
+7. Inverts the above expression (finds everything that is not a comment)
+^((?!#.*).)*$
