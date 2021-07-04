@@ -43,7 +43,7 @@ BASIC OPERATIONS
 8. git remote	->		adds the remote place. This is needed if we have not created the git repo online,
 						but worked localy with git init	(example: git remote add origin <url of git repo>)
 
-################################################## ADDITIONAL STEPS ##################################################  
+################################################## OTHER OPERATIONS ##################################################  
 
 (1) Pulls a specific commit from the repo
 a. git log -> choose the desired commit (has string example: 3e938848ecccd39c84e842ef657127ab4fbdf071 or online) 
@@ -110,4 +110,22 @@ Step 6. Push the new changes to the remote repository: git push origin master
 git rm --cached .idea/workspace.xml -> Untracks a file
 git rm --cached .idea/ -> Untracks a folder
 
+(14) How to switch remotely to another branch
+git checkout master (e.g. if the previous branch was main not it gets master)
+
+(15) Duplicate a remote repository
+git clone --bare https://github.com/exampleuser/old-repository.git
+cd old-repository.git
+git push --mirror https://github.com/exampleuser/new-repository.git
+cd ..
+rm -rf old-repository.git
+
+(16) Show information about the remote repository 
+git remote show origin
+
+(17) Rename a branch name
+git branch -m master default (from master to default)
+
+(18) Delete a branch (not set to default)
+git push origin --delete master (deletes the remote master branch)
 
