@@ -133,3 +133,7 @@ git push origin --delete master (deletes the remote master branch)
 git clone -b <branch-name> git url
 Example: git clone -b kinetic-devel https://github.com/introlab/rtabmap_ros.git
 
+(20) How to fix “modified content, untracked content”
+a) git rm -rf --cached myuntrackedfolder (This tells git to forget about it since it was being tracked formally).
+b) git add myuntrackedfolder 
+
